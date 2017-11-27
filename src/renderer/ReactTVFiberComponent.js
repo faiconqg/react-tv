@@ -89,11 +89,7 @@ function updateDOMProperties(
         domElement.removeAttribute(propKey);
       }
     } else if (propValue != null) {
-      if (propKey === 'focusable') {
-        domElement.setAttribute('react-tv-focusable', true);
-      } else {
-        domElement.setAttribute(propKey, propValue);
-      }
+      domElement.setAttribute(propKey, propValue);
     } else {
       // If we're updating to null or undefined, we should remove the property
       // from the DOM node instead of inadvertently setting to a string. This
@@ -169,7 +165,6 @@ const ReactTVFiberComponent = {
   ): void {
     const wasCustomComponentTag = isCustomComponent(tag, lastRawProps);
     const isCustomComponentTag = isCustomComponent(tag, nextRawProps);
-    // Apply the diff.
     updateDOMProperties(
       domElement,
       updatePayload,

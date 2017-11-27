@@ -18,7 +18,7 @@ let GlobalConfig = {
   straightOverlapThreshold: 0.5,
   rememberSource: false,
   disabled: false,
-  defaultElement: '',
+  defaultElement: '[focused="true"]',
   enterTo: '',
   leaveFor: null,
   restrict: 'self-first',
