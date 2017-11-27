@@ -17,15 +17,17 @@ class App extends React.Component {
           onFocus={() => console.log('focus ' + i)}
           onBlur={() => console.log('blur ' + i)}
           onPress={() => console.log('press ' + i)}
-          focusable
+          focusable={(i !== 2)}
+          focused={(i === 3)}
         >
-          {i}
+          {(i !== 2) ? i : null}
         </div>
       )
     }
 
     return (
       <div id='container'>
+        <h1>React-TV Navigation</h1>
         <div class="waterfall">
           {items}
         </div>

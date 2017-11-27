@@ -60,11 +60,7 @@ function setInitialDOMProperties(
     } else if (isCustomComponentTag) {
       DOMPropertyOperations.setValueForAttribute(domElement, propKey, nextProp);
     } else if (nextProp != null) {
-      if (propKey === 'focusable') {
-        domElement.setAttribute('react-tv-focusable', true);
-      } else {
-        domElement.setAttribute(propKey, nextProp);
-      }
+      domElement.setAttribute(propKey, nextProp);
     }
   }
 }

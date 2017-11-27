@@ -9,6 +9,9 @@
   Fork from luke-chang/js-spatial-navigation
  */
 
+
+// TODO: Migrate this logic on ReactRenderer
+
 let GlobalConfig = {
   selector: '',
   straightOnly: false,
